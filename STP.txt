@@ -1,0 +1,24 @@
+問1
+Switch3
+
+問2
+Switch1
+・F0/1　指定ポート：ルートポートの対向のポートのため
+・F0/2　ルートポート：ルートブリッジに一番近いポートのため　
+　　　　　　　　計算：Switch1-Switch3:100
+　　　　　　　　　　　Switch1-Switch2-Switch4-Switch3:19+100+100=219
+Switch2
+・F0/1　ルートポート：ルートブリッジに一番近いポートのため
+　　　　　　　　計算：Switch2-Switch1-Switch3:19+100=119
+　　　　　　　　　　　Switch2-Switch4-Switch3:100+100=200
+・F0/2　ブロッキングポート：ルートポートでも指定ポートでもないため
+
+Switch3
+・E0/1　指定ポート：ルートブリッジのポートのため
+・E0/2　指定ポート：ルートブリッジのポートのため
+
+Switch4
+・E0/1　指定ポート：Switch2-Switch4でSwitch4の方がブリッジIDが小さいため
+・E0/2　ルートポート：ルートブリッジに一番近いポートのため
+　　　　　　　　計算：Switch4-Switch3:100
+　　　　　　　　　　　Switch4-Switch2-Switch1-Switch3:100+19+100=219
